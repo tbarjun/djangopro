@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+
+        #form { margin:auto;border-radius:10px;background:gray;color:white;width:150px;padding:50px;}
+        body {background-image: url({% static 'images/maps.jpg' %});}
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Login</h1>
+    <div id="form">
+    <form action="login" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="username"></br>
+        <input type="password" name="password" placeholder="password"></br>
+        <input type="submit">
+    </form></div>
+</body>
+</html>
